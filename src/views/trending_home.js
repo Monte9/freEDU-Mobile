@@ -4,7 +4,7 @@ import { View, ScrollView, StyleSheet, Platform } from 'react-native';
 
 import { Text, Button, Icon } from 'react-native-elements';
 
-class Profile extends Component {
+class Trending extends Component {
   render() {
     const { navigation } = this.props
 
@@ -12,14 +12,14 @@ class Profile extends Component {
       <ScrollView>
         <View style={styles.hero}>
           <Icon color="white" name="whatshot" size={62} type='material' />
-          <Text style={styles.heading}>Profile</Text>
+          <Text style={styles.heading}>Trending</Text>
         </View>
         <Button
           buttonStyle={styles.button}
           backgroundColor='red'
           icon={{ name: "account", type: "material-community" }}
-          onPress={() => navigation.navigate('ProfileDetails')}
-          title="Got to Profile Detail View"
+          onPress={() => navigation.navigate('TrendingDetails')}
+          title="Got to Trending Detail View"
         />
       </ScrollView>
     );
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profile;
+export default Trending;

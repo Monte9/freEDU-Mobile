@@ -12,12 +12,11 @@ const Home = TabNavigator({
     screen: TrendingTab,
     path: '/trending',
     navigationOptions: {
-      tabBarLabel: 'Trending',
       tabBarIcon: ({ tintColor, focused }) => (
         <Icon
-          name={focused ? 'ios-beer' : 'ios-beer-outline'}
+          name='fire'
           size={30}
-          type='ionicon'
+          type='simple-line-icon'
           color={tintColor}
         />
       ),
@@ -27,12 +26,11 @@ const Home = TabNavigator({
     screen: SearchTab,
     path: '/search',
     navigationOptions: {
-      tabBarLabel: 'Search',
       tabBarIcon: ({ tintColor, focused }) => (
         <Icon
-          name={focused ? 'emoticon-cool' : 'emoticon-sad'}
+          name='search'
           size={30}
-          type='material-community'
+          type='octicon'
           color={tintColor}
         />
       ),
@@ -45,21 +43,22 @@ const Home = TabNavigator({
       tabBarLabel: 'Profile',
       tabBarIcon: ({ tintColor, focused }) => (
         <Icon
-          name={focused ? 'font' : 'font'}
+          name='user'
           size={30}
-          type='font-awesome'
+          type='simple-line-icon'
           color={tintColor}
         />
       ),
     },
   },
 }, {
-    initialRouteName: 'ProfileTab',
+    initialRouteName: 'TrendingTab',
     tabBarPosition: 'bottom',
     animationEnabled: false,
     swipeEnabled: false,
     tabBarOptions: {
       activeTintColor: '#e91e63',
+      showLabel: false,
     },
   });
 
